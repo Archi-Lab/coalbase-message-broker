@@ -3,7 +3,9 @@ pipeline {
 	stages {
 		stage('Deploy') {
 			steps {
-				sh 'docker-compose -p coalbase -f ./docker-compose.yml up -d'
+				docker.withServer('tcp://10.10.10.25:2376', 'CoalbaseVM') {
+					sh 'docker stack deploy -c ./docker-compose.yml message-broker'
+				}
 			}
 			post {
 				success {
