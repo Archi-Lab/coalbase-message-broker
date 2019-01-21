@@ -31,4 +31,3 @@ Longer explanations can be found at the [zookeeper documentation](https://zookee
 
 ## License
 The project is licensed under the Apache 2 license.
-
