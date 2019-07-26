@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+CURRENT=$(pwd)
 
 # start service
 docker-compose -p message-broker \
-  -f "./docker-compose-dev.yml" \
+  -f "$CURRENT/docker-compose-dev.yml" \
   down
