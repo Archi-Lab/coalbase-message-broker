@@ -18,10 +18,10 @@ services:
       ZOOKEEPER_SERVERS: tasks.zookeeper-1:2888:3888;tasks.zookeeper-2:2888:3888;tasks.zookeeper-3:2888:3888
     networks:
       - kafka
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+  #    logging:
+  #      driver: gelf
+  #      options:
+  #        gelf-address: "udp://127.0.0.1:12201"
 
   zookeeper-2:
     image: confluentinc/cp-zookeeper:latest
@@ -40,10 +40,10 @@ services:
       ZOOKEEPER_SERVERS: tasks.zookeeper-1:2888:3888;tasks.zookeeper-2:2888:3888;tasks.zookeeper-3:2888:3888
     networks:
       - kafka
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+  #    logging:
+  #      driver: gelf
+  #      options:
+  #        gelf-address: "udp://127.0.0.1:12201"
 
   zookeeper-3:
     image: confluentinc/cp-zookeeper:latest
@@ -62,10 +62,10 @@ services:
       ZOOKEEPER_SERVERS: tasks.zookeeper-1:2888:3888;tasks.zookeeper-2:2888:3888;tasks.zookeeper-3:2888:3888
     networks:
       - kafka
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+  #    logging:
+  #      driver: gelf
+  #      options:
+  #        gelf-address: "udp://127.0.0.1:12201"
 
   kafka-1:
     image: confluentinc/cp-kafka:latest
@@ -89,10 +89,10 @@ services:
     networks:
       - kafka
       - coalbase_backend
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+  #    logging:
+  #      driver: gelf
+  #      options:
+  #        gelf-address: "udp://127.0.0.1:12201"
 
   kafka-2:
     image: confluentinc/cp-kafka:latest
@@ -116,10 +116,10 @@ services:
     networks:
       - kafka
       - coalbase_backend
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+  #    logging:
+  #      driver: gelf
+  #      options:
+  #        gelf-address: "udp://127.0.0.1:12201"
 
   kafka-3:
     image: confluentinc/cp-kafka:latest
@@ -143,10 +143,10 @@ services:
     networks:
       - kafka
       - coalbase_backend
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://127.0.0.1:12201"
+#    logging:
+#      driver: gelf
+#      options:
+#        gelf-address: "udp://127.0.0.1:12201"
 
 networks:
   kafka:
